@@ -13,3 +13,4 @@
 //Error
 "error.title" = "ops";
 "generic.error" = "Um erro desconhecido ocorreu, tente novamente mais tarde.";
+"error.blockchain.chart" = "Ops, ocorreu um erro para carregar o gráfico.";

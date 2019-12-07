@@ -23,6 +23,9 @@
 		F027BA8E239B2EB6005CDCF0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F027BA8D239B2EB6005CDCF0 /* Localizable.strings */; };
 		F027BA92239B44E8005CDCF0 /* TitleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027BA91239B44E8005CDCF0 /* TitleHeaderView.swift */; };
 		F027BA94239B44F4005CDCF0 /* TitleHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F027BA93239B44F4005CDCF0 /* TitleHeaderView.xib */; };
+		F027BA99239B5208005CDCF0 /* BlockchainChartViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027BA98239B5208005CDCF0 /* BlockchainChartViewCell.swift */; };
+		F027BA9B239B5220005CDCF0 /* BlockchainChartViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F027BA9A239B5220005CDCF0 /* BlockchainChartViewCell.xib */; };
+		F027BA9F239B5E2D005CDCF0 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027BA9E239B5E2D005CDCF0 /* ViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		F027BA8D239B2EB6005CDCF0 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		F027BA91239B44E8005CDCF0 /* TitleHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleHeaderView.swift; sourceTree = "<group>"; };
 		F027BA93239B44F4005CDCF0 /* TitleHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleHeaderView.xib; sourceTree = "<group>"; };
+		F027BA98239B5208005CDCF0 /* BlockchainChartViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockchainChartViewCell.swift; sourceTree = "<group>"; };
+		F027BA9A239B5220005CDCF0 /* BlockchainChartViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlockchainChartViewCell.xib; sourceTree = "<group>"; };
+		F027BA9E239B5E2D005CDCF0 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +215,7 @@
 		F027BA86239B2624005CDCF0 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				F027BA9E239B5E2D005CDCF0 /* ViewExtensions.swift */,
 				F027BA87239B2636005CDCF0 /* RequestResponse.swift */,
 			);
 			path = utils;
@@ -218,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				F027BA90239B449D005CDCF0 /* titleHeaderView */,
+				F027BA95239B5100005CDCF0 /* blockchainChartViewCell */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -229,6 +237,15 @@
 				F027BA93239B44F4005CDCF0 /* TitleHeaderView.xib */,
 			);
 			path = titleHeaderView;
+			sourceTree = "<group>";
+		};
+		F027BA95239B5100005CDCF0 /* blockchainChartViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F027BA98239B5208005CDCF0 /* BlockchainChartViewCell.swift */,
+				F027BA9A239B5220005CDCF0 /* BlockchainChartViewCell.xib */,
+			);
+			path = blockchainChartViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +359,7 @@
 				F027BA5C239B1FCE005CDCF0 /* LaunchScreen.storyboard in Resources */,
 				F027BA8E239B2EB6005CDCF0 /* Localizable.strings in Resources */,
 				F027BA94239B44F4005CDCF0 /* TitleHeaderView.xib in Resources */,
+				F027BA9B239B5220005CDCF0 /* BlockchainChartViewCell.xib in Resources */,
 				F027BA59239B1FCE005CDCF0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +478,8 @@
 				F027BA52239B1FCD005CDCF0 /* SceneDelegate.swift in Sources */,
 				F027BA88239B2636005CDCF0 /* RequestResponse.swift in Sources */,
 				F027BA85239B2605005CDCF0 /* APIClient.swift in Sources */,
+				F027BA9F239B5E2D005CDCF0 /* ViewExtensions.swift in Sources */,
+				F027BA99239B5208005CDCF0 /* BlockchainChartViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

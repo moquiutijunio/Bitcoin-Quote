@@ -10,11 +10,11 @@ import Foundation
 
 struct Transaction: Codable {
     
-    var date: Int
+    var miliseconds: Int
     var value: Double
     
     enum CodingKeys: String, CodingKey {
-        case date = "x"
+        case miliseconds = "x"
         case value = "y"
     }
 }

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="200" id="6q9-Jh-YDi" customClass="BlockchainChartViewCell" customModule="Bitcoin_Quotes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="209"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6q9-Jh-YDi" id="SH5-RI-3e7">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="209"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7gX-yQ-BVQ" customClass="LineChartView" customModule="Charts">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="200" id="d8e-BA-1xb"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="7gX-yQ-BVQ" firstAttribute="leading" secondItem="SH5-RI-3e7" secondAttribute="leading" id="7t2-F5-j4u"/>
+                    <constraint firstItem="7gX-yQ-BVQ" firstAttribute="top" secondItem="SH5-RI-3e7" secondAttribute="top" id="UsS-md-hDS"/>
+                    <constraint firstAttribute="bottom" secondItem="7gX-yQ-BVQ" secondAttribute="bottom" id="qjc-aQ-OFO"/>
+                    <constraint firstAttribute="trailing" secondItem="7gX-yQ-BVQ" secondAttribute="trailing" id="sf6-sP-dLm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="chartView" destination="7gX-yQ-BVQ" id="DJm-IQ-ldz"/>
+            </connections>
+            <point key="canvasLocation" x="-487" y="292"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -24,7 +24,7 @@ extension APIClient: APIClientProtocol {
     func getBlockchainStatistics() -> Single<[Transaction]> {
         
         return Single.create { (single) -> Disposable in
-            guard let url = URL(string: "\(APIClient.chartsURLString)") else {
+            guard let url = URL(string: "\(APIClient.chartsURLString)?timespan=1year") else {
                 single(.error(APIClient.error(description: NSLocalizedString("generic.error", comment: ""))))
                 return Disposables.create()
             }
