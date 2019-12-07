@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  bitcoinquotes
+
+  Created by Junio Moquiuti on 06/12/19.
+  Copyright © 2019 Junio Moquiuti. All rights reserved.
+*/
+
+//Error
+"error.title" = "ops";
+"generic.error" = "Um erro desconhecido ocorreu, tente novamente mais tarde.";

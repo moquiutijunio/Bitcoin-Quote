@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,12 +12,15 @@
 		BE3EB7C37B3AB8866176F575 /* libPods-bitcoinquotesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A836AA03EECC5E3F8A172F95 /* libPods-bitcoinquotesTests.a */; };
 		F027BA50239B1FCD005CDCF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027BA4F239B1FCD005CDCF0 /* AppDelegate.swift */; };
 		F027BA52239B1FCD005CDCF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027BA51239B1FCD005CDCF0 /* SceneDelegate.swift */; };
-		F027BA54239B1FCD005CDCF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027BA53239B1FCD005CDCF0 /* ViewController.swift */; };
-		F027BA57239B1FCD005CDCF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F027BA55239B1FCD005CDCF0 /* Main.storyboard */; };
 		F027BA59239B1FCE005CDCF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F027BA58239B1FCE005CDCF0 /* Assets.xcassets */; };
 		F027BA5C239B1FCE005CDCF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F027BA5A239B1FCE005CDCF0 /* LaunchScreen.storyboard */; };
 		F027BA67239B1FCF005CDCF0 /* bitcoinquotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027BA66239B1FCF005CDCF0 /* bitcoinquotesTests.swift */; };
 		F027BA72239B1FCF005CDCF0 /* bitcoinquotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027BA71239B1FCF005CDCF0 /* bitcoinquotesUITests.swift */; };
+		F027BA81239B22F4005CDCF0 /* BitcoinQuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027BA80239B22F4005CDCF0 /* BitcoinQuotesViewController.swift */; };
+		F027BA85239B2605005CDCF0 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027BA84239B2605005CDCF0 /* APIClient.swift */; };
+		F027BA88239B2636005CDCF0 /* RequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027BA87239B2636005CDCF0 /* RequestResponse.swift */; };
+		F027BA8C239B29DE005CDCF0 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027BA8B239B29DE005CDCF0 /* Transaction.swift */; };
+		F027BA8E239B2EB6005CDCF0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F027BA8D239B2EB6005CDCF0 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +53,6 @@
 		F027BA4C239B1FCD005CDCF0 /* Bitcoin Quotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bitcoin Quotes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F027BA4F239B1FCD005CDCF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F027BA51239B1FCD005CDCF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F027BA53239B1FCD005CDCF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F027BA56239B1FCD005CDCF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F027BA58239B1FCE005CDCF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F027BA5B239B1FCE005CDCF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F027BA5D239B1FCE005CDCF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +62,11 @@
 		F027BA6D239B1FCF005CDCF0 /* bitcoinquotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bitcoinquotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F027BA71239B1FCF005CDCF0 /* bitcoinquotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bitcoinquotesUITests.swift; sourceTree = "<group>"; };
 		F027BA73239B1FCF005CDCF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F027BA80239B22F4005CDCF0 /* BitcoinQuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinQuotesViewController.swift; sourceTree = "<group>"; };
+		F027BA84239B2605005CDCF0 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		F027BA87239B2636005CDCF0 /* RequestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestResponse.swift; sourceTree = "<group>"; };
+		F027BA8B239B29DE005CDCF0 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		F027BA8D239B2EB6005CDCF0 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +107,6 @@
 				DB48AA998A05DFA29F574D7D /* Pods-bitcoinquotesUITests.debug.xcconfig */,
 				016D90149E2A76FF39AAE5DC /* Pods-bitcoinquotesUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -140,13 +145,16 @@
 		F027BA4E239B1FCD005CDCF0 /* bitcoinquotes */ = {
 			isa = PBXGroup;
 			children = (
+				F027BA82239B25D7005CDCF0 /* apiClient */,
+				F027BA83239B25E0005CDCF0 /* models */,
+				F027BA86239B2624005CDCF0 /* utils */,
+				F027BA7F239B22BF005CDCF0 /* class */,
 				F027BA4F239B1FCD005CDCF0 /* AppDelegate.swift */,
 				F027BA51239B1FCD005CDCF0 /* SceneDelegate.swift */,
-				F027BA53239B1FCD005CDCF0 /* ViewController.swift */,
-				F027BA55239B1FCD005CDCF0 /* Main.storyboard */,
 				F027BA58239B1FCE005CDCF0 /* Assets.xcassets */,
 				F027BA5A239B1FCE005CDCF0 /* LaunchScreen.storyboard */,
 				F027BA5D239B1FCE005CDCF0 /* Info.plist */,
+				F027BA8D239B2EB6005CDCF0 /* Localizable.strings */,
 			);
 			path = bitcoinquotes;
 			sourceTree = "<group>";
@@ -169,6 +177,38 @@
 			path = bitcoinquotesUITests;
 			sourceTree = "<group>";
 		};
+		F027BA7F239B22BF005CDCF0 /* class */ = {
+			isa = PBXGroup;
+			children = (
+				F027BA80239B22F4005CDCF0 /* BitcoinQuotesViewController.swift */,
+			);
+			path = class;
+			sourceTree = "<group>";
+		};
+		F027BA82239B25D7005CDCF0 /* apiClient */ = {
+			isa = PBXGroup;
+			children = (
+				F027BA84239B2605005CDCF0 /* APIClient.swift */,
+			);
+			path = apiClient;
+			sourceTree = "<group>";
+		};
+		F027BA83239B25E0005CDCF0 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				F027BA8B239B29DE005CDCF0 /* Transaction.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		F027BA86239B2624005CDCF0 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				F027BA87239B2636005CDCF0 /* RequestResponse.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -180,6 +220,7 @@
 				F027BA48239B1FCD005CDCF0 /* Sources */,
 				F027BA49239B1FCD005CDCF0 /* Frameworks */,
 				F027BA4A239B1FCD005CDCF0 /* Resources */,
+				5F1103412492BBD034085576 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -277,8 +318,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F027BA5C239B1FCE005CDCF0 /* LaunchScreen.storyboard in Resources */,
+				F027BA8E239B2EB6005CDCF0 /* Localizable.strings in Resources */,
 				F027BA59239B1FCE005CDCF0 /* Assets.xcassets in Resources */,
-				F027BA57239B1FCD005CDCF0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +360,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F1103412492BBD034085576 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bitcoinquotes/Pods-bitcoinquotes-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bitcoinquotes/Pods-bitcoinquotes-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bitcoinquotes/Pods-bitcoinquotes-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		93D63C01DF838F16EA77B54C /* [CP] Check Pods Manifest.lock */ = {
@@ -372,9 +430,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F027BA54239B1FCD005CDCF0 /* ViewController.swift in Sources */,
+				F027BA8C239B29DE005CDCF0 /* Transaction.swift in Sources */,
+				F027BA81239B22F4005CDCF0 /* BitcoinQuotesViewController.swift in Sources */,
 				F027BA50239B1FCD005CDCF0 /* AppDelegate.swift in Sources */,
 				F027BA52239B1FCD005CDCF0 /* SceneDelegate.swift in Sources */,
+				F027BA88239B2636005CDCF0 /* RequestResponse.swift in Sources */,
+				F027BA85239B2605005CDCF0 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,14 +471,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F027BA55239B1FCD005CDCF0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F027BA56239B1FCD005CDCF0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F027BA5A239B1FCE005CDCF0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
