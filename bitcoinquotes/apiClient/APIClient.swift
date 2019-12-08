@@ -12,7 +12,7 @@ import RxSwift
 protocol APIClientProtocol {
     var blockchainStatisticsRequestResponse: Observable<RequestResponse<[Transaction]>> { get }
         
-    func getBlockchainStatistics()
+    func getBlockchainStatistics(timespan: String)
 }
 
 class APIClient {
@@ -30,10 +30,10 @@ extension APIClient: APIClientProtocol {
             .asObservable()
     }
     
-    func getBlockchainStatistics() {
+    func getBlockchainStatistics(timespan: String) {
         blockchainStatisticsRequestResponseSubject.onNext(.loading)
         
-        guard let url = URL(string: "\(APIClient.chartsURLString)?timespan=1year") else {
+        guard let url = URL(string: "\(APIClient.chartsURLString)?timespan=\(timespan)") else {
             blockchainStatisticsRequestResponseSubject.onNext(.failure(NSLocalizedString("generic.error", comment: "")))
             return
         }

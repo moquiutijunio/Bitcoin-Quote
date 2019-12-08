@@ -13,8 +13,11 @@ import Cartography
 final class BitcoinQuotesViewController: UIViewController {
     
     private var disposeBag: DisposeBag!
+    var currentTimespan: Timespan = .allTime
+    
     private lazy var apiClient: APIClientProtocol = APIClient()
     private lazy var titleHeaderView = TitleHeaderView.instantiateFromNib()
+    private lazy var chartDurationView = ChartDurationView.instantiateFromNib(viewModel: self)
     
     private var blockchainRequestResponse: RequestResponse<[Transaction]> = .loading {
         didSet {
@@ -24,7 +27,7 @@ final class BitcoinQuotesViewController: UIViewController {
         }
     }
     
-    lazy var tableView: UITableView = {
+    private lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.alwaysBounceVertical = false
         tableView.separatorColor = .clear
@@ -49,12 +52,11 @@ final class BitcoinQuotesViewController: UIViewController {
      
         bind()
         applyLayout()
-        apiClient.getBlockchainStatistics()
+        apiClient.getBlockchainStatistics(timespan: currentTimespan.key)
     }
     
     private func applyLayout() {
         view.backgroundColor = .white
-        
     }
     
     private func bind() {
@@ -74,17 +76,30 @@ extension BitcoinQuotesViewController {
     private func addSubviews() {
         
         view.addSubview(titleHeaderView)
+        view.addSubview(chartDurationView)
         view.addSubview(tableView)
-        constrain(view, titleHeaderView, tableView) { (container, headerView, tableView) in
+        constrain(view, titleHeaderView, chartDurationView, tableView) { (container, headerView, durationView, tableView) in
             headerView.top == container.safeAreaLayoutGuide.top
             headerView.left == container.left
             headerView.right == container.right
             
-            tableView.top == headerView.bottom
+            durationView.top == headerView.bottom
+            durationView.left == container.left
+            durationView.right == container.right
+            
+            tableView.top == durationView.bottom
             tableView.left == container.left
             tableView.right == container.right
             tableView.bottom == container.safeAreaLayoutGuide.bottom
         }
+    }
+}
+
+// MARK: - ChartDurationViewModelProtocol
+extension BitcoinQuotesViewController: ChartDurationViewModelProtocol {
+    
+    func durationSegmentedDidTap() {
+        apiClient.getBlockchainStatistics(timespan: currentTimespan.key)
     }
 }
 
@@ -118,7 +133,6 @@ extension BitcoinQuotesViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard case .failure = blockchainRequestResponse else { return }
-        
-        apiClient.getBlockchainStatistics()
+        apiClient.getBlockchainStatistics(timespan: currentTimespan.key)
     }
 }

@@ -14,6 +14,9 @@
 		F00F8C39239C55130001FFE3 /* LoadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F00F8C37239C55130001FFE3 /* LoadingTableViewCell.xib */; };
 		F00F8C3C239C55310001FFE3 /* ErrorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00F8C3A239C55310001FFE3 /* ErrorTableViewCell.swift */; };
 		F00F8C3D239C55310001FFE3 /* ErrorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F00F8C3B239C55310001FFE3 /* ErrorTableViewCell.xib */; };
+		F00F8C40239D72990001FFE3 /* ChartDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00F8C3F239D72990001FFE3 /* ChartDurationView.swift */; };
+		F00F8C42239D72CA0001FFE3 /* ChartDurationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F00F8C41239D72CA0001FFE3 /* ChartDurationView.xib */; };
+		F00F8C44239D74B90001FFE3 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00F8C43239D74B90001FFE3 /* Colors.swift */; };
 		F027BA50239B1FCD005CDCF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027BA4F239B1FCD005CDCF0 /* AppDelegate.swift */; };
 		F027BA52239B1FCD005CDCF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027BA51239B1FCD005CDCF0 /* SceneDelegate.swift */; };
 		F027BA59239B1FCE005CDCF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F027BA58239B1FCE005CDCF0 /* Assets.xcassets */; };
@@ -63,6 +66,9 @@
 		F00F8C37239C55130001FFE3 /* LoadingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingTableViewCell.xib; sourceTree = "<group>"; };
 		F00F8C3A239C55310001FFE3 /* ErrorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTableViewCell.swift; sourceTree = "<group>"; };
 		F00F8C3B239C55310001FFE3 /* ErrorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorTableViewCell.xib; sourceTree = "<group>"; };
+		F00F8C3F239D72990001FFE3 /* ChartDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDurationView.swift; sourceTree = "<group>"; };
+		F00F8C41239D72CA0001FFE3 /* ChartDurationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChartDurationView.xib; sourceTree = "<group>"; };
+		F00F8C43239D74B90001FFE3 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		F027BA4C239B1FCD005CDCF0 /* Bitcoin Quotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bitcoin Quotes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F027BA4F239B1FCD005CDCF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F027BA51239B1FCD005CDCF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +162,15 @@
 			path = errorViewCell;
 			sourceTree = "<group>";
 		};
+		F00F8C3E239D71590001FFE3 /* chartDurationView */ = {
+			isa = PBXGroup;
+			children = (
+				F00F8C3F239D72990001FFE3 /* ChartDurationView.swift */,
+				F00F8C41239D72CA0001FFE3 /* ChartDurationView.xib */,
+			);
+			path = chartDurationView;
+			sourceTree = "<group>";
+		};
 		F027BA43239B1FCC005CDCF0 = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +256,7 @@
 		F027BA86239B2624005CDCF0 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				F00F8C43239D74B90001FFE3 /* Colors.swift */,
 				F027BA9E239B5E2D005CDCF0 /* ViewExtensions.swift */,
 				F027BA87239B2636005CDCF0 /* RequestResponse.swift */,
 			);
@@ -251,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				F027BA90239B449D005CDCF0 /* titleHeaderView */,
+				F00F8C3E239D71590001FFE3 /* chartDurationView */,
 				F027BA95239B5100005CDCF0 /* blockchainChartViewCell */,
 				F00F8C35239C54DE0001FFE3 /* errorViewCell */,
 				F00F8C34239C54CD0001FFE3 /* loadingViewCell */,
@@ -385,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F00F8C39239C55130001FFE3 /* LoadingTableViewCell.xib in Resources */,
+				F00F8C42239D72CA0001FFE3 /* ChartDurationView.xib in Resources */,
 				F027BA5C239B1FCE005CDCF0 /* LaunchScreen.storyboard in Resources */,
 				F00F8C3D239C55310001FFE3 /* ErrorTableViewCell.xib in Resources */,
 				F027BA8E239B2EB6005CDCF0 /* Localizable.strings in Resources */,
@@ -509,7 +527,9 @@
 				F027BA52239B1FCD005CDCF0 /* SceneDelegate.swift in Sources */,
 				F027BA88239B2636005CDCF0 /* RequestResponse.swift in Sources */,
 				F027BA85239B2605005CDCF0 /* APIClient.swift in Sources */,
+				F00F8C44239D74B90001FFE3 /* Colors.swift in Sources */,
 				F027BA9F239B5E2D005CDCF0 /* ViewExtensions.swift in Sources */,
+				F00F8C40239D72990001FFE3 /* ChartDurationView.swift in Sources */,
 				F00F8C3C239C55310001FFE3 /* ErrorTableViewCell.swift in Sources */,
 				F027BA99239B5208005CDCF0 /* BlockchainChartViewCell.swift in Sources */,
 			);

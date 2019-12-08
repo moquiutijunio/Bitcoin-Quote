@@ -10,6 +10,12 @@
 "market.price" =  "Market Price (USD)";
 "info.blockchain" =  "Average USD market price across major bitcoin exchanges.";
 "source.blockchain" =  "Source: blockchain.com";
+"thirty.days" = "30dias";
+"sixty.days" = "60dias";
+"hundred.eighty.days" = "180dias";
+"one.year" = "1ano";
+"two.years" = "2anos";
+"all.time" = "Tempo todo";
 
 //Error
 "error.title" = "ops";

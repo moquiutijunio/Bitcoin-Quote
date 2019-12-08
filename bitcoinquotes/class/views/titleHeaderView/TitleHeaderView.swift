@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TitleHeaderView: UIView {
+final class TitleHeaderView: UIView {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!

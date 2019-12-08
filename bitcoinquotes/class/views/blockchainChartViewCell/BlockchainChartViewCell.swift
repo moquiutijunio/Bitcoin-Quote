@@ -22,6 +22,7 @@ final class BlockchainChartViewCell: UITableViewCell {
     
     private func applyLayout() {
         backgroundColor = .clear
+        selectionStyle = .none
         
         chartView.backgroundColor = .clear
         chartView.pinchZoomEnabled = true
@@ -63,7 +64,7 @@ final class BlockchainChartViewCell: UITableViewCell {
         let dataSet = LineChartDataSet(dataEntry)
         dataSet.lineWidth = 1
         dataSet.circleRadius = 0
-        dataSet.colors = [UIColor(red:0.0, green:0.4, blue: 1, alpha: 1)]
+        dataSet.colors = [.primaryColor]
         dataSet.highlightColor = .gray
         dataSet.drawValuesEnabled = false
 
