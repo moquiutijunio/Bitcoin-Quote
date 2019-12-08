@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="pap-zv-qAC" customClass="LoadingTableViewCell" customModule="Bitcoin_Quotes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mdy-1M-roS">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Q6m-it-Gmk">
+                            <rect key="frame" x="187" y="60" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="fUt-OI-gp3"/>
+                                <constraint firstAttribute="height" constant="40" id="yBo-AA-9da"/>
+                            </constraints>
+                        </activityIndicatorView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZD-KO-TWZ">
+                            <rect key="frame" x="16" y="106" width="382" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="SZD-KO-TWZ" firstAttribute="top" secondItem="Q6m-it-Gmk" secondAttribute="bottom" constant="6" id="42O-TW-DDc"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="SZD-KO-TWZ" secondAttribute="bottom" constant="12" id="CtS-rT-QRz"/>
+                        <constraint firstItem="Q6m-it-Gmk" firstAttribute="centerX" secondItem="mdy-1M-roS" secondAttribute="centerX" id="LaB-dm-eNK"/>
+                        <constraint firstAttribute="trailing" secondItem="SZD-KO-TWZ" secondAttribute="trailing" constant="16" id="Qdm-kF-D5u"/>
+                        <constraint firstItem="SZD-KO-TWZ" firstAttribute="centerY" secondItem="mdy-1M-roS" secondAttribute="centerY" constant="16" id="XDm-QA-VYM"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="bWG-Ox-CIu"/>
+                        <constraint firstItem="SZD-KO-TWZ" firstAttribute="leading" secondItem="mdy-1M-roS" secondAttribute="leading" constant="16" id="leB-U5-doD"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="mdy-1M-roS" secondAttribute="bottom" id="JF3-zA-76r"/>
+                <constraint firstItem="TLG-PJ-uG1" firstAttribute="trailing" secondItem="mdy-1M-roS" secondAttribute="trailing" id="cUZ-aG-7Uo"/>
+                <constraint firstItem="mdy-1M-roS" firstAttribute="top" secondItem="pap-zv-qAC" secondAttribute="top" id="dsO-Oc-zqd"/>
+                <constraint firstItem="mdy-1M-roS" firstAttribute="leading" secondItem="TLG-PJ-uG1" secondAttribute="leading" id="ozL-Jr-CO4"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="TLG-PJ-uG1"/>
+            <connections>
+                <outlet property="activityIndicationView" destination="Q6m-it-Gmk" id="xah-2b-fvL"/>
+                <outlet property="loadingLabel" destination="SZD-KO-TWZ" id="qxZ-4t-8PU"/>
+            </connections>
+            <point key="canvasLocation" x="-401.44927536231887" y="175.78125"/>
+        </view>
+    </objects>
+</document>

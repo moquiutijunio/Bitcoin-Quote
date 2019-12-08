@@ -13,7 +13,7 @@ import Cartography
 final class BitcoinQuotesViewController: UIViewController {
     
     private var disposeBag: DisposeBag!
-    private lazy var apiClient = APIClient()
+    private lazy var apiClient: APIClientProtocol = APIClient()
     private lazy var titleHeaderView = TitleHeaderView.instantiateFromNib()
     
     private var blockchainRequestResponse: RequestResponse<[Transaction]> = .loading {
@@ -33,6 +33,8 @@ final class BitcoinQuotesViewController: UIViewController {
         tableView.dataSource = self
         
         tableView.register(UINib(nibName: BlockchainChartViewCell.reuseId, bundle: nil), forCellReuseIdentifier: BlockchainChartViewCell.reuseId)
+        tableView.register(UINib(nibName: LoadingTableViewCell.reuseId, bundle: nil), forCellReuseIdentifier: LoadingTableViewCell.reuseId)
+        tableView.register(UINib(nibName: ErrorTableViewCell.reuseId, bundle: nil), forCellReuseIdentifier: ErrorTableViewCell.reuseId)
         return tableView
     }()
     
@@ -45,8 +47,9 @@ final class BitcoinQuotesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
      
-        applyLayout()
         bind()
+        applyLayout()
+        apiClient.getBlockchainStatistics()
     }
     
     private func applyLayout() {
@@ -57,17 +60,10 @@ final class BitcoinQuotesViewController: UIViewController {
     private func bind() {
         disposeBag = DisposeBag()
         
-        apiClient.getBlockchainStatistics()
-            .subscribe { [weak self] (event) in
-                guard let self = self else { return }
-                
-                switch event {
-                case .success(let transactions):
-                    self.blockchainRequestResponse = .success(transactions)
-                case .error(let error):
-                    self.blockchainRequestResponse = .failure(error.localizedDescription)
-                }
-            }
+        apiClient.blockchainStatisticsRequestResponse
+            .subscribe(onNext: { [unowned self] (response) in
+                self.blockchainRequestResponse = response
+            })
             .disposed(by: disposeBag)
     }
 }
@@ -96,10 +92,6 @@ extension BitcoinQuotesViewController {
 extension BitcoinQuotesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard case .success = blockchainRequestResponse else {
-            return 0
-        }
-        
         return 1
     }
     
@@ -110,6 +102,15 @@ extension BitcoinQuotesViewController: UITableViewDelegate, UITableViewDataSourc
             cell.bindIn(transactions: transactions)
             return cell
 
+        case .loading:
+            let cell = tableView.dequeueReusableCell(withIdentifier: LoadingTableViewCell.reuseId, for: indexPath) as! LoadingTableViewCell
+            return cell
+            
+        case .failure(let error):
+            let cell = tableView.dequeueReusableCell(withIdentifier: ErrorTableViewCell.reuseId, for: indexPath) as! ErrorTableViewCell
+            cell.bindIn(error: error)
+            return cell
+            
         default:
             return UITableViewCell()
         }
@@ -118,6 +119,6 @@ extension BitcoinQuotesViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard case .failure = blockchainRequestResponse else { return }
         
-        //TODO try again request
+        apiClient.getBlockchainStatistics()
     }
 }

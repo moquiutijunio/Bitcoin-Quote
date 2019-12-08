@@ -6,6 +6,7 @@
   Copyright © 2019 Junio Moquiuti. All rights reserved.
 */
 
+"loading" = "Carregando...";
 "market.price" =  "Market Price (USD)";
 "info.blockchain" =  "Average USD market price across major bitcoin exchanges.";
 "source.blockchain" =  "Source: blockchain.com";

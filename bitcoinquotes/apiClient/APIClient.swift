@@ -10,37 +10,43 @@ import UIKit
 import RxSwift
 
 protocol APIClientProtocol {
-    
+    var blockchainStatisticsRequestResponse: Observable<RequestResponse<[Transaction]>> { get }
+        
+    func getBlockchainStatistics()
 }
 
 class APIClient {
     
     static let chartsURLString = "https://api.blockchain.info/charts/transactions-per-second"
+    
+    private var blockchainStatisticsRequestResponseSubject = BehaviorSubject<RequestResponse<[Transaction]>>(value: .new)
 }
 
 // MARK: - APIClientProtocol
 extension APIClient: APIClientProtocol {
     
-    func getBlockchainStatistics() -> Single<[Transaction]> {
+    var blockchainStatisticsRequestResponse: Observable<RequestResponse<[Transaction]>> {
+        return blockchainStatisticsRequestResponseSubject
+            .asObservable()
+    }
+    
+    func getBlockchainStatistics() {
+        blockchainStatisticsRequestResponseSubject.onNext(.loading)
         
-        return Single.create { (single) -> Disposable in
-            guard let url = URL(string: "\(APIClient.chartsURLString)?timespan=1year") else {
-                single(.error(APIClient.error(description: NSLocalizedString("generic.error", comment: ""))))
-                return Disposables.create()
+        guard let url = URL(string: "\(APIClient.chartsURLString)?timespan=1year") else {
+            blockchainStatisticsRequestResponseSubject.onNext(.failure(NSLocalizedString("generic.error", comment: "")))
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { [unowned self] (data, response, error) in
+            guard let data = data, let transactions = Transaction.mapArray(data: data) else {
+                let error = error?.localizedDescription ?? NSLocalizedString("generic.error", comment: "")
+                self.blockchainStatisticsRequestResponseSubject.onNext(.failure(error))
+                return
             }
             
-            URLSession.shared.dataTask(with: url) { (data, response, error) in
-                guard let data = data, let transactions = Transaction.mapArray(data: data) else {
-                    let error = error?.localizedDescription ?? NSLocalizedString("generic.error", comment: "")
-                    single(.error(APIClient.error(description: error)))
-                    return
-                }
-                
-                single(.success(transactions))
-            }.resume()
-            
-            return Disposables.create()
-        }
+            self.blockchainStatisticsRequestResponseSubject.onNext(.success(transactions))
+        }.resume()
     }
 }
 

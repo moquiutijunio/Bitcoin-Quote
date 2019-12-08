@@ -10,6 +10,10 @@
 		02527EBD9E4186DCDE9D0060 /* libPods-bitcoinquotesUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E94E0C4FE318EA8F6C8ED9 /* libPods-bitcoinquotesUITests.a */; };
 		425BB44F7EFC3DCE03037115 /* Pods_bitcoinquotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8717A889A6C8691AAE2F90 /* Pods_bitcoinquotes.framework */; };
 		BE3EB7C37B3AB8866176F575 /* libPods-bitcoinquotesTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A836AA03EECC5E3F8A172F95 /* libPods-bitcoinquotesTests.a */; };
+		F00F8C38239C55130001FFE3 /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00F8C36239C55130001FFE3 /* LoadingTableViewCell.swift */; };
+		F00F8C39239C55130001FFE3 /* LoadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F00F8C37239C55130001FFE3 /* LoadingTableViewCell.xib */; };
+		F00F8C3C239C55310001FFE3 /* ErrorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00F8C3A239C55310001FFE3 /* ErrorTableViewCell.swift */; };
+		F00F8C3D239C55310001FFE3 /* ErrorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F00F8C3B239C55310001FFE3 /* ErrorTableViewCell.xib */; };
 		F027BA50239B1FCD005CDCF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027BA4F239B1FCD005CDCF0 /* AppDelegate.swift */; };
 		F027BA52239B1FCD005CDCF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F027BA51239B1FCD005CDCF0 /* SceneDelegate.swift */; };
 		F027BA59239B1FCE005CDCF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F027BA58239B1FCE005CDCF0 /* Assets.xcassets */; };
@@ -55,6 +59,10 @@
 		D0E94E0C4FE318EA8F6C8ED9 /* libPods-bitcoinquotesUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-bitcoinquotesUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB48AA998A05DFA29F574D7D /* Pods-bitcoinquotesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bitcoinquotesUITests.debug.xcconfig"; path = "Target Support Files/Pods-bitcoinquotesUITests/Pods-bitcoinquotesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E642C85172504A26FDFCFEB6 /* Pods-bitcoinquotesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bitcoinquotesTests.debug.xcconfig"; path = "Target Support Files/Pods-bitcoinquotesTests/Pods-bitcoinquotesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F00F8C36239C55130001FFE3 /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
+		F00F8C37239C55130001FFE3 /* LoadingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingTableViewCell.xib; sourceTree = "<group>"; };
+		F00F8C3A239C55310001FFE3 /* ErrorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTableViewCell.swift; sourceTree = "<group>"; };
+		F00F8C3B239C55310001FFE3 /* ErrorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ErrorTableViewCell.xib; sourceTree = "<group>"; };
 		F027BA4C239B1FCD005CDCF0 /* Bitcoin Quotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bitcoin Quotes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F027BA4F239B1FCD005CDCF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F027BA51239B1FCD005CDCF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +136,24 @@
 				D0E94E0C4FE318EA8F6C8ED9 /* libPods-bitcoinquotesUITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F00F8C34239C54CD0001FFE3 /* loadingViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F00F8C36239C55130001FFE3 /* LoadingTableViewCell.swift */,
+				F00F8C37239C55130001FFE3 /* LoadingTableViewCell.xib */,
+			);
+			path = loadingViewCell;
+			sourceTree = "<group>";
+		};
+		F00F8C35239C54DE0001FFE3 /* errorViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F00F8C3A239C55310001FFE3 /* ErrorTableViewCell.swift */,
+				F00F8C3B239C55310001FFE3 /* ErrorTableViewCell.xib */,
+			);
+			path = errorViewCell;
 			sourceTree = "<group>";
 		};
 		F027BA43239B1FCC005CDCF0 = {
@@ -226,6 +252,8 @@
 			children = (
 				F027BA90239B449D005CDCF0 /* titleHeaderView */,
 				F027BA95239B5100005CDCF0 /* blockchainChartViewCell */,
+				F00F8C35239C54DE0001FFE3 /* errorViewCell */,
+				F00F8C34239C54CD0001FFE3 /* loadingViewCell */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -356,7 +384,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F00F8C39239C55130001FFE3 /* LoadingTableViewCell.xib in Resources */,
 				F027BA5C239B1FCE005CDCF0 /* LaunchScreen.storyboard in Resources */,
+				F00F8C3D239C55310001FFE3 /* ErrorTableViewCell.xib in Resources */,
 				F027BA8E239B2EB6005CDCF0 /* Localizable.strings in Resources */,
 				F027BA94239B44F4005CDCF0 /* TitleHeaderView.xib in Resources */,
 				F027BA9B239B5220005CDCF0 /* BlockchainChartViewCell.xib in Resources */,
@@ -471,6 +501,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F00F8C38239C55130001FFE3 /* LoadingTableViewCell.swift in Sources */,
 				F027BA8C239B29DE005CDCF0 /* Transaction.swift in Sources */,
 				F027BA81239B22F4005CDCF0 /* BitcoinQuotesViewController.swift in Sources */,
 				F027BA92239B44E8005CDCF0 /* TitleHeaderView.swift in Sources */,
@@ -479,6 +510,7 @@
 				F027BA88239B2636005CDCF0 /* RequestResponse.swift in Sources */,
 				F027BA85239B2605005CDCF0 /* APIClient.swift in Sources */,
 				F027BA9F239B5E2D005CDCF0 /* ViewExtensions.swift in Sources */,
+				F00F8C3C239C55310001FFE3 /* ErrorTableViewCell.swift in Sources */,
 				F027BA99239B5208005CDCF0 /* BlockchainChartViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
